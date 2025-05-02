@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button";
-
-function App() {
+const App = ({ children }) => {
   return (
-    <>
-      <h1>Welcome to elib dashboard</h1>
-      <Button>Click me</Button>
-    </>
+    <div>
+      {/* Layout */}
+      {children}
+    </div>
   );
-}
+};
 
 export default App;
