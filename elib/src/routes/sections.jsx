@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const Login = lazy(() => import("@/pages/Login"));
+const Register = lazy(() => import("@/pages/Register"));
 
 export const routesSection = [
   {
@@ -11,9 +12,8 @@ export const routesSection = [
         <Outlet />
       </Suspense>
     ),
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: "login", element: <Login /> },
-    ],
+    children: [{ index: true, element: <HomePage /> }],
   },
+  { path: "login", element: <Login /> },
+  { path: "register", element: <Register /> },
 ];
