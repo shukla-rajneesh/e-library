@@ -1,3 +1,4 @@
+import AuthLayout from "@/layouts/AuthLayout";
 import { lazy, Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
@@ -14,6 +15,15 @@ export const routesSection = [
     ),
     children: [{ index: true, element: <HomePage /> }],
   },
-  { path: "login", element: <Login /> },
-  { path: "register", element: <Register /> },
+  {
+    element: (
+      <AuthLayout>
+        <Outlet />
+      </AuthLayout>
+    ),
+    children: [
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
+    ],
+  },
 ];
