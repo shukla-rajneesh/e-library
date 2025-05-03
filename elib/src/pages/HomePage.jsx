@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { CirclePlus } from "lucide-react";
 
 const HomePage = () => {
   return (
     <>
-      <h1>Welcome the elib dahboard</h1>
-      <Button>Click Me</Button>
+      <div className="h-screen flex items-center justify-center ">
+        <Button size="lg" className="rounded-full">
+          <CirclePlus />
+          Click Me
+        </Button>
+      </div>
     </>
   );
 };
